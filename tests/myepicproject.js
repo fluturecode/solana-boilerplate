@@ -1,11 +1,11 @@
-const anchor = require("@coral-xyz/anchor");
+const anchor = require('@project-serum/anchor');
 
 const main = async() => {
   console.log("🚀 Starting test...")
 
   anchor.setProvider(anchor.AnchorProvider.env());
   const program = anchor.workspace.Myepicproject;
-  const tx = await program.rpc.initialize();
+  const tx = await program.rpc.startStuffOff();
 
   console.log("📝 Your transaction signature", tx);
 }
@@ -19,5 +19,3 @@ const runMain = async () => {
     process.exit(1);
   }
 };
-
-runMain();
